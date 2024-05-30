@@ -24,7 +24,7 @@ internal class Program
         var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
        
         var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
-        var bytes = File.ReadAllBytes("C:\\PRismHR\\Capture.PNG");
+        var bytes = File.ReadAllBytes("C:\\Siddhant\\Capture.PNG");
         var file = Convert.ToBase64String(bytes);
         msg.AddAttachment("Capture.PNG", file);
         var response = await client.SendEmailAsync(msg);
